@@ -23,7 +23,6 @@ for token in doc:
 
 ## 1. Download and Import Build in pipeline
 nlp = spacy.load('en_core_web_sm')
-![Screenshot 2023-06-13 163601.png](attachment:3b95b385-ce92-425c-b1a2-ed8d8114b5a9.png)
 
 import en_core_web_sm
 nlp = en_core_web_sm.load()
@@ -32,6 +31,7 @@ doc = nlp('Mr. X has become invisible for a day and he really enjoys the day.')
 
 for token in doc:
     print(token, " | ", token.pos_, " | ", token.lemma_)  #token + parts of speech of token and simplified form of verb used
+    
 Mr.  |  PROPN  |  Mr.
 X  |  PROPN  |  X
 has  |  AUX  |  have
@@ -47,6 +47,7 @@ enjoys  |  VERB  |  enjoy
 the  |  DET  |  the
 day  |  NOUN  |  day
 .  |  PUNCT  |  .
+
 nlp.pipe_names
 ['tok2vec', 'tagger', 'parser', 'attribute_ruler', 'lemmatizer', 'ner']
 # nlp.pipe_labels
